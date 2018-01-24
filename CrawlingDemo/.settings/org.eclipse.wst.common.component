@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="BikePortal">
+    <wb-module deploy-name="CrawlingDemo">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="BikePortal"/>
-        <property name="java-output-path" value="/BikePortal/build/classes"/>
+        <property name="context-root" value="CrawlingDemo"/>
+        <property name="java-output-path" value="/CrawlingDemo/build/classes"/>
     </wb-module>
 </project-modules>

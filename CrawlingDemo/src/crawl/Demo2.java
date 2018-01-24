@@ -1,4 +1,4 @@
-package dao;
+package crawl;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,25 +9,42 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class BajajBikes {
+public class Demo2 {
+
 	public static void main(String[] args)
 	{
 		try {
-			ArrayList<String> list1=new ArrayList<>();
+			/*ArrayList<String> list1=new ArrayList<>();
 			Document doc2=Jsoup.connect("https://www.bajajauto.com/motor-bikes").get();
-			Element ele1=doc2.getElementsByClass("ftr-links").get(0);
+			Element ele1=doc2.getElementsByClass("sub-ftr-links").get(1);
 			Elements ele2=ele1.select("ul");
-			Element ele4=ele2.select("li").last();
+			Element ele4=ele2.select("li").first();
 			Elements link1=ele4.select("a");
 			for (Element element : link1)
 			{
 				list1.add(element.absUrl("href"));
 			}	
 			list1.removeAll(Arrays.asList(null,""));
-			System.out.println(list1+"\n");
+			System.out.println(list1+"\n");*/
+			
+			int l=0;
+			ArrayList<String> ARY=new ArrayList<>();
+			Document docum=Jsoup.connect("https://www.bajajauto.com/motor-bikes").get();
+			Element parent=docum.getElementsByClass("ftr-links").get(l);
+			Elements lin=parent.select("a");
+			for (Element element : lin)
+			{
+			   ARY.add(element.absUrl("href"));
+			}	
+			ARY.removeAll(Arrays.asList(null,""));
+			System.out.println(ARY+"\n");
 			
 			
 			
+			
+			
+			
+			/*
 			ArrayList<String> list3=new ArrayList<>();
 			Document doc3=Jsoup.connect("https://www.bajajauto.com/motor-bikes").get();
 			Element ele3=doc3.getElementsByClass("sub-ftr-links").get(1);
@@ -40,7 +57,7 @@ public class BajajBikes {
 			System.out.println(list3+"\n");
 			
 			
-	/*		
+			
 		ArrayList<String> list4=new ArrayList<>();
 			Document doc4=Jsoup.connect("https://www.bajajauto.com/motor-bikes").get();
 			Element ele6=doc4.getElementsByClass("sub-ftr-links").last();
@@ -51,7 +68,7 @@ public class BajajBikes {
 			}	
 			list4.removeAll(Arrays.asList(null,""));
 			System.out.println(list4+"\n");
-			*/
+			
 			
 			
 			
@@ -135,7 +152,7 @@ public class BajajBikes {
 			 					j++;
 						 }
 			 		}
-			 		}
+			 		}*/
 			 					
 			 
 			 		
@@ -147,7 +164,9 @@ public class BajajBikes {
 		 		e.printStackTrace();
 		 	}
 		
-		
 	}
-
 }
+	
+		
+	
+
